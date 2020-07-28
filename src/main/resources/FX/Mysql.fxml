@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="420.0" prefWidth="750.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yjs.FX.controller.MySQLController">
+    <children>
+        <Label layoutX="10.0" layoutY="20.0" prefHeight="20.0" prefWidth="75.0" text="数据库地址" />
+        <TextField fx:id="dburl" disable="true" layoutX="90.0" layoutY="17.0" prefHeight="30.0" prefWidth="210.0" stylesheets="@application.css" text="dev-mysql.default.svc:3306" />
+        <Label layoutX="320.0" layoutY="17.0" prefHeight="30.0" prefWidth="40.0" text="库名" />
+        <TextField fx:id="dbname" layoutX="371.0" layoutY="17.0" prefHeight="30.0" prefWidth="200.0" />
+        <Label layoutX="10.0" layoutY="55.0" prefHeight="20.0" prefWidth="75.0" text="用户名" />
+        <TextField fx:id="username" layoutX="90.0" layoutY="52.0" prefHeight="30.0" prefWidth="210.0" />
+        <Label layoutX="323.0" layoutY="55.0" prefHeight="20.0" prefWidth="45.0" text="密码" />
+        <PasswordField fx:id="password" layoutX="373.0" layoutY="52.0" prefHeight="30.0" prefWidth="200.0" />
+        <Separator layoutY="92.0" prefHeight="20.0" prefWidth="590.0" />
+        <Label layoutX="10.0" layoutY="119.0" prefHeight="20.0" prefWidth="75.0" text="基础包路径" />
+        <TextField fx:id="basePackage" layoutX="99.0" layoutY="119.0" prefHeight="23.0" prefWidth="470.0" text="com.yjs.mhh" />
+        <Label layoutX="10.0" layoutY="159.0" prefHeight="20.0" prefWidth="75.0" text="实体包名" />
+        <TextField fx:id="entityPackage" layoutX="99.0" layoutY="159.0" prefHeight="23.0" prefWidth="170.0" text="entity" />
+        <Label layoutX="284.0" layoutY="159.0" prefHeight="20.0" prefWidth="100.0" text="mapper名" />
+        <TextField fx:id="mapperPackage" layoutX="399.0" layoutY="158.0" prefHeight="23.0" prefWidth="170.0" text="mapper" />
+        <Label layoutX="10.0" layoutY="199.0" prefHeight="15.0" prefWidth="75.0" text="service名" />
+        <TextField fx:id="servicePackage" layoutX="99.0" layoutY="199.0" prefHeight="23.0" prefWidth="170.0" text="service" />
+        <Label layoutX="284.0" layoutY="199.0" prefHeight="20.0" prefWidth="100.0" text="controller名" />
+        <TextField fx:id="controllerPackage" layoutX="398.0" layoutY="199.0" prefHeight="23.0" prefWidth="170.0" text="controller" />
+        <Label layoutX="10.0" layoutY="239.0" prefHeight="15.0" prefWidth="75.0" text="表名" />
+        <TextField fx:id="tabname" layoutX="101.0" layoutY="239.0" prefHeight="23.0" prefWidth="420.0" promptText="" stylesheets="@application.css" />
+        <Button layoutX="524.0" layoutY="239.0" mnemonicParsing="false" onAction="#choseBtnClick" text="选择" />
+        <CheckBox fx:id="isTrim" layoutX="143.0" layoutY="351.0" mnemonicParsing="false" onAction="#isTrimChange" prefHeight="20.0" prefWidth="131.0" selected="true" text="是否过滤前缀" />
+        <Label layoutX="308.0" layoutY="352.0" prefHeight="20.0" prefWidth="75.0" text="前缀代码" />
+        <TextField fx:id="trimValue" layoutX="393.0" layoutY="351.0" prefHeight="23.0" prefWidth="170.0" />
+        <Button layoutX="505.0" layoutY="390.0" mnemonicParsing="false" onAction="#buildBtnClick" prefHeight="23.0" prefWidth="58.0" text="生成" textAlignment="CENTER" />
+        <Label layoutX="590.0" prefHeight="420.0" prefWidth="155.0" style="-fx-alignment: top-left;-fx-text-alignment: left;" text="名词解释说明&#13;&#13;VO(value object):值对象&#13;通常用于业务层之间的数据传递，由new创建，GC回收&#13;PO(persistant object):持久层对象&#13;PO属性和数据库中表的字段形成一一对应关系&#13;DTO(data transfer object)：数据传输对象&#13;是一种设计模式之间传输数据，简而言之就是接口之间传递的数据封装，目的是一能提高数据传输的速度(减少了传输字段)，二能隐藏后端表结构&#13;BO（business object）：业务对象BO把业务逻辑封转为一个对象&#13;POJO（plian ordinary java object）：简单无规则java对象" textFill="#e80606" textOverrun="CLIP" wrapText="true" />
+        <Label layoutX="10.0" layoutY="283.0" prefHeight="91.0" prefWidth="82.0" text="生成选项" />
+        <CheckBox fx:id="myMapper" layoutX="143.0" layoutY="284.0" mnemonicParsing="false" text="myMapper" />
+        <CheckBox fx:id="controller" layoutX="284.0" layoutY="284.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="116.0" selected="true" text="controller" />
+        <CheckBox fx:id="service" layoutX="417.0" layoutY="284.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="75.0" selected="true" text="service" />
+        <CheckBox fx:id="mapper" layoutX="142.0" layoutY="321.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="131.0" selected="true" text="mapper" />
+        <CheckBox fx:id="entity" layoutX="287.0" layoutY="321.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="106.0" selected="true" text="entity" />
+      <CheckBox fx:id="entity1" layoutX="417.0" layoutY="321.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="58.0" selected="true" text="h5" />
+      <CheckBox fx:id="entity11" layoutX="505.0" layoutY="321.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="58.0" selected="true" text="js" />
+    </children>
+</Pane>

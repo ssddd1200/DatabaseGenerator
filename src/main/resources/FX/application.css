@@ -1,0 +1,17 @@
+.root{
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Helvetica, Arial, sans-serif";
+}
+.label{
+    -fx-font-size: 12px;
+    -fx-background-color: #fff;
+    -fx-text-alignment: right;
+    -fx-alignment: center-right;
+}
+.check-box{
+    -fx-font-size: 12px;
+}
+.text-field{
+    -fx-pref-height: 26px;
+    -fx-alignment: center-left;
+}

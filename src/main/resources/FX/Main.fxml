@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+
+<TabPane prefHeight="450.0" prefWidth="750.0" stylesheets="@application.css" side="TOP" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/8.0.202" fx:controller="com.yjs.FX.controller.MainController" fx:id="tabPane">
+    <tabs>
+        <Tab text="Oracle数据库" fx:id="orclTab">
+            <content>
+                <fx:include source="Oracle.fxml" fx:id="oracleTabPage"></fx:include>
+            </content>
+        </Tab>
+        <Tab text="Mysql数据库" fx:id="mysqlTab">
+            <content>
+                <fx:include source="Mysql.fxml" fx:id="mysqlTabPage"></fx:include>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

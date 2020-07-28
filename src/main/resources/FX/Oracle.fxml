@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="450.0" prefWidth="750.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yjs.FX.controller.OracleController">
+    <children>
+        <Label layoutX="10.0" layoutY="20.0" prefHeight="20.0" prefWidth="75.0" text="数据库地址" />
+        <TextField fx:id="dburl" layoutX="90.0" layoutY="17.0" prefHeight="30.0" prefWidth="480.0" />
+        <Label layoutX="10.0" layoutY="55.0" prefHeight="20.0" prefWidth="75.0" text="用户名" />
+        <TextField fx:id="username" layoutX="90.0" layoutY="52.0" prefHeight="30.0" prefWidth="210.0" />
+        <Label layoutX="323.0" layoutY="55.0" prefHeight="20.0" prefWidth="45.0" text="密码" />
+        <PasswordField fx:id="password" layoutX="373.0" layoutY="52.0" prefHeight="30.0" prefWidth="200.0" />
+        <Separator layoutY="92.0" prefHeight="20.0" prefWidth="590.0" />
+        <Label layoutX="10.0" layoutY="116.0" prefHeight="20.0" prefWidth="75.0" text="JAVA包路径" />
+        <TextField fx:id="javaPackage" layoutX="99.0" layoutY="115.0" prefHeight="23.0" prefWidth="471.0" text="xtgl.xtdl"/>
+        <Label layoutX="10.0" layoutY="153.0" prefHeight="15.0" prefWidth="75.0" text="表名" />
+        <TextField fx:id="tabname" layoutX="100.0" layoutY="151.0" prefHeight="23.0" prefWidth="420.0" promptText="" stylesheets="@application.css" />
+        <Button layoutX="533.0" layoutY="151.0" mnemonicParsing="false" onAction="#choseBtnClick" text="选择" />
+        <CheckBox fx:id="isTrim" layoutX="139.0" layoutY="228.0" mnemonicParsing="false" onAction="#isTrimChange" prefHeight="20.0" prefWidth="131.0" selected="true" text="是否过滤前缀" />
+        <Label layoutX="281.0" layoutY="227.0" prefHeight="20.0" prefWidth="75.0" text="前缀代码" />
+        <TextField fx:id="trimValue" layoutX="360.0" layoutY="227.0" prefHeight="23.0" prefWidth="160.0" />
+        <Button layoutX="507.0" layoutY="270.0" mnemonicParsing="false" onAction="#buildBtnClick" prefHeight="23.0" prefWidth="58.0" text="生成" textAlignment="CENTER" />
+        <Label layoutX="590.0" prefHeight="450.0" prefWidth="155.0" style="-fx-alignment: top-left;-fx-text-alignment: left;" text="代码生成规则&#13;&#13;_s_enty: 为保存实体对象&#13;_g_enty: 为分页对象&#13;&#13;只生成h5、存储过程和实体，json和serv手工书写" textFill="#e80606" textOverrun="CLIP" wrapText="true" />
+        <Label layoutX="10.0" layoutY="173.0" prefHeight="91.0" prefWidth="82.0" text="生成选项" />
+        <CheckBox fx:id="html" layoutX="139.0" layoutY="193.0" mnemonicParsing="false" text="h5和js" />
+        <CheckBox fx:id="sql" layoutX="280.0" layoutY="193.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="116.0" selected="true" text="SQL存储过程" />
+        <CheckBox fx:id="entity" layoutX="410.0" layoutY="193.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="106.0" selected="true" text="entity" />
+    </children>
+</Pane>
